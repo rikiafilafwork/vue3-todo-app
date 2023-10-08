@@ -2,6 +2,7 @@
 import { ref, computed, watchEffect } from 'vue'
 import TodoList from '../components/TodoList.vue'
 import TodoFilter from '../components/TodoFilter.vue'
+import NewsList from '../components/NewsList.vue'
 
 const STORAGE_KEY = 'vue-todoapp'
 
@@ -104,4 +105,5 @@ function onHashChange() {
                 @doneEdit="doneEdit" @cancelEdit="cancelEdit" @completeAll="toggleAll" @removeCompleted="removeCompleted" />
         </div>
     </div>
+    <NewsList />
 </template>
